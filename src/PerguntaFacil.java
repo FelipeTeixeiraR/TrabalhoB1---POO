@@ -19,23 +19,23 @@ public class PerguntaFacil extends Pergunta{
         int a, b;
 
         switch (tconta){
-            case 0: a = random.nextInt(50, 200);
-                b = random.nextInt(50, 200);
+            case 0: a = random.nextInt(20, 50);
+                b = random.nextInt(20, 50);
                 setResposta(a + b);
                 setTextoConta(a + " + " + b);
                 break;
-                case 1: a = random.nextInt(100, 300);
-                b = random.nextInt(50, a);
+                case 1: a = random.nextInt(10, 20);
+                b = random.nextInt(9, a);
 
                 setResposta(a - b);
                 setTextoConta(a + " - " + b);
                 break;
-            case 2: a = random.nextInt(10, 20);
-                b = random.nextInt(10, 20);
+            case 2: a = random.nextInt(2, 10);
+                b = random.nextInt(2, 10);
                 setResposta(a * b);
                 setTextoConta(a + " * " + b);
                 break;
-            case 3:  a = random.nextInt(20, 200);
+            case 3:  a = random.nextInt(8, 20);
                 b = random.nextInt(2, 4);
                 setResposta(a / b);
                 setTextoConta(a + " / " + b);
