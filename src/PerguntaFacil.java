@@ -35,11 +35,8 @@ public class PerguntaFacil extends Pergunta{
                 setResposta(a * b);
                 setTextoConta(a + " * " + b);
                 break;
-            case 3: a = random.nextInt(20, 100);
-                do {
-                    b = random.nextInt(2, 5);
-                } while (a % b != 0);
-
+            case 3:  a = random.nextInt(20, 200);
+                b = random.nextInt(2, 4);
                 setResposta(a / b);
                 setTextoConta(a + " / " + b);
                 break;
