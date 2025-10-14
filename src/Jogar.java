@@ -5,7 +5,7 @@ public class Jogar {
     private int numeroRodads;
     private int dificuldade;
 
-    public ArrayList<Jogador> getJogadores() {return jogadores;}
+    
 
     public void cadastrarJogadores(Jogador j){
         jogadores.add(j);
