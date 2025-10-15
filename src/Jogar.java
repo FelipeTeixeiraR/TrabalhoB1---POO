@@ -11,6 +11,33 @@ public class Jogar {
         jogadores.add(j);
     }
 
+    public void criarJogadoresAutomaticamente(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("-> Digite quantos jogadores esta partida tera: ");
+        int quantJog = scanner.nextInt();
+
+        System.out.println("-> Digite o numero de rodadas que a partida tera: ");
+        numeroRodads = scanner.nextInt();
+        scanner.nextLine();
+
+
+        System.out.println("-> Digite a dificuldade da partida;\n1- Facil\n2- Mediana\n3- Dificil\n");
+        dificuldade = scanner.nextInt();
+        scanner.nextLine();
+
+        for (int i=0; i<quantJog;i++){
+            System.out.println("-> Digite o nome do jogador "+i+": ");
+            String nomeJogador = scanner.nextLine();
+            Jogador j = new Jogador(i + 1, nomeJogador);
+            cadastrarJogadores(j);
+
+
+
+
+
+        }
+    }
+
     public void iniciar(int numeroRodadas, int dificuldade){
         Scanner scanner = new Scanner(System.in);
         Pergunta p;
@@ -49,35 +76,10 @@ public class Jogar {
         for (int i=0;i<tabela.size();i++){
             Jogador j = jogadores.get(i);
 
-            System.out.println(i+". Jogador "+j.getId()+", "+j.getNome()+" :"+tabela.get(i));
+            System.out.println((i+1)+". Jogador "+j.getId()+", "+j.getNome()+" :"+tabela.get(i));
         }
     }
-    public void criarJogadoresAutomaticamente(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("-> Digite quantos jogadores esta partida tera: ");
-        int quantJog = scanner.nextInt();
-
-        System.out.println("-> Digite o numero de rodadas que a partida tera: ");
-        numeroRodads = scanner.nextInt();
-        scanner.nextLine();
-
-
-        System.out.println("-> Digite a dificuldade da partida;\n1- Facil\n2- Mediana\n3- Dificil\n");
-        dificuldade = scanner.nextInt();
-        scanner.nextLine();
-
-        for (int i=0; i<quantJog;i++){
-            System.out.println("-> Digite o nome do jogador "+i+": ");
-            String nomeJogador = scanner.nextLine();
-            Jogador j = new Jogador(i + 1, nomeJogador);
-            cadastrarJogadores(j);
-
-
-
-
-
-        }
-    }
+    
 
     public int getNumeroRodads() {return numeroRodads;}
     public int getDificuldade() {return dificuldade;}
